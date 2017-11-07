@@ -15,12 +15,9 @@ body,html{
 }
 a{
   color: #ffffff;
-    &:hover{
+    &:hover, &focus{
       color: $yellow-default;
       text-decoration: none;
-    }
-    &:focus{
-      color: $yellow-default;
     }
 }
 header, main, footer{
@@ -28,21 +25,47 @@ header, main, footer{
 }
 .navbar{
   z-index: 9999;
+  box-shadow: 0 1px 5px #b0b0b0;
 }
 .brand-inside{
   display: none;
 }
 .navbar-nav{
   margin: 0 auto;
+  width: 300px;
   li{
-    width: 100%;
+    width: 150px;
+    margin: 0 auto;
     text-align: center;
+  }
+}
+.navbar-light .navbar-nav .nav-link {
+  color: $blue-bright;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+    &:focus, &:hover {
+      color: $blue-default;
+      border-bottom: 3px solid $yellow-default;
+      font-weight: bold;
+    }
+}
+.navbar-toggler{
+  border: 0;
+  padding: 5px;
+  span{
+    font-size: 1.6rem;
+  }
+  &:focus{
+    outline: 2px solid $yellow-default;
   }
 }
 .navbar-brand{
   margin: 0 auto;
+  margin-top: 10px;
+    img{
+        width: 260px;
+    }
 }
-
 .welcome{
   position: relative;
   height: 100vh;
@@ -73,6 +96,7 @@ img.child-image{
 .place-name{
   color: $blue-default;
   font-weight: bold;
+  display: block;
 }
 .btn{
   color: #ffffff;
@@ -313,8 +337,16 @@ img.child-image{
     display: block;
   }
   .navbar-nav{
-    li {
+    width: 33%;
+    text-align: center;
+    justify-content: flex-end;
+    &.navbar-right{
+      justify-content: flex-start;
+    }
+    li{
       width: auto;
+      margin: 0;
+      margin: 0 1rem;
     }
   }
   .row-large{

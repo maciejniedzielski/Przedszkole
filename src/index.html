@@ -13,43 +13,42 @@
 <body>
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand brand-outside" href="#">
-    <img src="img/logo.png" class="d-inline-block align-center" alt="Idź na start">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="container-fluid nav-container">
-    <div class="collapse navbar-collapse navbar-center" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto push-left">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tablica ogłoszeń</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Nasza Kadra</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Rekrutacja</a>
-        </li>
-      </ul>
-      <a class="navbar-brand brand-inside" href="#">
-        <img src="img/logo.png" class="d-inline-block align-center rounded" alt="idź na start webroad.pl">
-      </a>
-      <ul class="navbar-nav mr-auto push-right navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Zdjęcia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kontakt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Galeria</a>
-        </li>
-      </ul>
+    <a class="navbar-brand brand-outside" href="#">
+      <img src="img/logo.png" class="d-inline-block align-center" alt="Idź na start">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid nav-container">
+      <div class="collapse navbar-collapse navbar-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto push-left">
+          <li class="nav-item">
+            <a class="nav-link" href="#aktualnosci">Tablica ogłoszeń</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kadra">Nasza Kadra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rekrutacja">Rekrutacja</a>
+          </li>
+        </ul>
+        <a class="navbar-brand brand-inside" href="#">
+          <img src="img/logo.png" class="d-inline-block align-center rounded" alt="idź na start webroad.pl">
+        </a>
+        <ul class="navbar-nav mr-auto push-right navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#zdjecia">Zdjęcia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galeria</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-</nav>
+  </nav>
 </header>
 <main>
   <section class="welcome">
@@ -62,7 +61,7 @@
         </div>
       </div>
   </section>
-  <section class="news-container">
+  <section class="news-container" id="aktualnosci">
     <div class="container-fluid">
       <h2>Aktualności</h2>
       <div class="row row-large">
@@ -87,7 +86,7 @@
       </div>
     </div>
   </section>
-  <section class="staff-container">
+  <section class="staff-container" id="kadra">
     <img src="img/rodzina.png" alt="Rodzina" class="family-photo">
     <div class="row">
       <div class="col-sm-12 offset-sm-12 col-md-6 offset-md-6">
@@ -97,7 +96,7 @@
       </div>
     </div>
   </section>
-  <section class="reviews-container">
+  <section class="reviews-container" id="opinie">
     <div class="container">
       <h2 class="text-center">Opinie <em class="font-weight-bold">rodziców</em></h2>
       <div class="row review">
@@ -144,7 +143,7 @@
   </section>
 </main>
 <footer>
-  <div class="container-fluid footer-content">
+  <div class="container-fluid footer-content" id="kontakt">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -152,7 +151,7 @@
           <ul>
             <li>Rzeszów 31-101 <span>ul. Jana Kolupy  21</span></li>
             <li>Telefon: +40 653 900 374</li>
-            <li>E-mail:<a href="mailto: teczowy_raj@gmail.com"> teczowy_raj@gmail.com</a></li>
+            <li>E-mail:<a href="mailto:teczowy_raj@gmail.com"> teczowy_raj@gmail.com</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -189,15 +188,15 @@
     <div class="container copyrights">
         <img src="img/footer-logo.png" alt="">
         <div>
-          <p>wszystkie prawa zastrzeżone dla <em class="font-weight-bold">teczowyraj.pl</em></p>
+          <p>wszystkie prawa zastrzeżone dla <em class="font-weight-bold"><a href="">teczowyraj.pl</a></em></p>
           <p></p>
-          <p>Projekt i realizacja strony internetowej <em class="font-weight-bold">Maciej Betnar</em></p>
+          <p>Projekt i realizacja strony internetowej <em class="font-weight-bold"><a href="">Maciej Betnar</a></em></p>
           <p></p>
         </div>
     </div>
   </div>
 </footer>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <!--build:js-->
