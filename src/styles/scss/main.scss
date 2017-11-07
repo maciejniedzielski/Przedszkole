@@ -70,6 +70,8 @@ a.media{
   flex-direction: row;
   align-items:  center;
   justify-content: center;
+  text-decoration: none;
+  
     &::before{
       color: $yellow-default;
     }

@@ -7,7 +7,7 @@ $(document).ready(function(){
     if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top-70
+            scrollTop: target.offset().top-90
         }, 600);
         window.location.hash = this.hash;
     }
