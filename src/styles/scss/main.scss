@@ -7,13 +7,6 @@
 body,html{
   overflow-x: hidden;
 }
-a{
-  color: #ffffff;
-    &:hover, &focus{
-      color: $yellow-default;
-      text-decoration: none;
-    }
-}
 header, main, footer{
   font-family: 'Signika';
   font-size: 16px;
@@ -61,6 +54,32 @@ header, main, footer{
         width: 260px;
     }
 }
+.media-container{
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  justify-content: center;
+}
+a.media{
+  width: 35px;
+  height: 35px;
+  border-radius: 40px;
+  margin: 0 10px;
+  border: 2px solid $yellow-default;
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  justify-content: center;
+    &::before{
+      color: $yellow-default;
+    }
+    &:hover{
+      border-color: $blue-default;
+      &::before{
+        color: $blue-default;
+      }
+    }
+}
 .welcome{
   position: relative;
   height: 100vh;
@@ -81,10 +100,27 @@ header, main, footer{
     padding: 1rem 0.7rem;
     line-height: 1.7rem;
   }
+  .wrapper-li{
+    display: inline-block;
+    border-bottom: 2px solid #dbdbdb;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #dbdbdb;
+      &.active{
+        border-color: $yellow-default;
+        font-size: 1.5rem;
+        color: #303030;
+        }
+      &:hover, &:focus{
+          cursor: pointer;
+          color: $yellow-default;
+      }
+  }
+
 }
 img.child-image{
   position: absolute;
-  left: -70px;
+  left: -85px;
   bottom: -50px;
   width: 250px;
 }
@@ -158,7 +194,7 @@ img.child-image{
       }
       p{
         min-height: 50px;
-        padding: 1rem auto;
+        line-height: 1.6rem;
         text-align: justify;
       }
     }
@@ -269,6 +305,34 @@ span.star-checked, span.star-not-checked{
             }
         }
     }
+    a{
+      color: #ffffff;
+        &:hover, &focus{
+          color: $yellow-default;
+          text-decoration: none;
+        }
+    }
+}
+.footer-menu{
+  width: 80%;
+}
+.footer-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -50px;
+  top: 30%;
+    a.media{
+      margin: 5px;
+      &:hover{
+        border-color: $blue-bright;
+        &::before{
+          color: $blue-bright;
+        }
+      }
+    }
 }
 .copyrights {
   border-top: 1px solid #7e89a6;
@@ -295,9 +359,12 @@ span.star-checked, span.star-not-checked{
 @media (min-width: 576px) {
   img.child-image{
     position: absolute;
-    left: -70px;
-    bottom: -50px;
+    left: -120px;
+    bottom: -70px;
     width: 400px;
+  }
+  .wrapper-menu{
+    margin-top: 50px;
   }
   .family-photo{
     width: 60%;
@@ -310,6 +377,9 @@ span.star-checked, span.star-not-checked{
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .wrapper-menu{
+    margin-top: 150px;
+  }
   .staff-container{
     background-position: center;
     height: 500px;
@@ -329,6 +399,17 @@ span.star-checked, span.star-not-checked{
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
+  .row-large{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .family-photo{
+    left:5%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {,
   .brand-outside{
     display: none;
   }
@@ -348,17 +429,6 @@ span.star-checked, span.star-not-checked{
       margin: 0 1rem;
     }
   }
-  .row-large{
-    width: 90%;
-    margin: 0 auto;
-  }
-  .family-photo{
-    left:5%;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
   img.child-image{
     left: -280px;
     bottom: -80px;
