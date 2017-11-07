@@ -1,14 +1,8 @@
 @import "reset";
 @import "settings";
-@import url('https://fonts.googleapis.com/css?family=Signika');
 @font-face {
     font-family: Linotte-SemiBold;
     src: url("font/Linotte-SemiBold.otf") format("opentype");
-}
-
-*{
-  font-family: 'Signika';
-  font-size: 16px;
 }
 body,html{
   overflow-x: hidden;
@@ -22,6 +16,7 @@ a{
 }
 header, main, footer{
   font-family: 'Signika';
+  font-size: 16px;
 }
 .navbar{
   z-index: 9999;
