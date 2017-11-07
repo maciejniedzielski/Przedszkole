@@ -1,0 +1,1 @@
+$(document).ready(function(){$('a[href*="#"]:not([href="#"])').on("click",function(t){var o=$(this.getAttribute("href"));o.length&&(t.preventDefault(),$("html, body").stop().animate({scrollTop:o.offset().top-70},600),window.location.hash=this.hash)})});
