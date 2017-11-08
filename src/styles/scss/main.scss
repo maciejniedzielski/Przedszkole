@@ -4,20 +4,25 @@
     font-family: Linotte-SemiBold;
     src: url("font/Linotte-SemiBold.otf") format("opentype");
 }
+
 body,html{
   overflow-x: hidden;
 }
+
 header, main, footer{
   font-family: 'Signika';
   font-size: 16px;
 }
+
 .navbar{
   z-index: 9999;
   box-shadow: 0 1px 5px #b0b0b0;
 }
+
 .brand-inside{
   display: none;
 }
+
 .navbar-nav{
   margin: 0 auto;
   width: 300px;
@@ -27,6 +32,7 @@ header, main, footer{
     text-align: center;
   }
 }
+
 .navbar-light .navbar-nav .nav-link {
   color: $blue-bright;
   border-bottom: 3px solid transparent;
@@ -37,6 +43,7 @@ header, main, footer{
       font-weight: bold;
     }
 }
+
 .navbar-toggler{
   border: 0;
   padding: 5px;
@@ -47,6 +54,7 @@ header, main, footer{
     outline: 2px solid $yellow-default;
   }
 }
+
 .navbar-brand{
   margin: 0 auto;
   margin-top: 10px;
@@ -54,13 +62,15 @@ header, main, footer{
         width: 260px;
     }
 }
-.media-container{
+
+.media{
   display: flex;
   flex-direction: row;
   align-items:  center;
   justify-content: center;
 }
-a.media{
+
+.media-link{
   width: 35px;
   height: 35px;
   border-radius: 40px;
@@ -71,17 +81,20 @@ a.media{
   align-items:  center;
   justify-content: center;
   text-decoration: none;
-  
+
     &::before{
       color: $yellow-default;
     }
+
     &:hover{
+      text-decoration: none;
       border-color: $blue-default;
       &::before{
         color: $blue-default;
       }
     }
 }
+
 .welcome{
   position: relative;
   height: 100vh;
@@ -97,7 +110,7 @@ a.media{
     text-transform: uppercase;
     line-height: 3.5rem;
   }
-  p{
+  .welcome-text{
     color: $blue-bright;
     padding: 1rem 0.7rem;
     line-height: 1.7rem;
@@ -120,17 +133,20 @@ a.media{
   }
 
 }
+
 img.child-image{
   position: absolute;
   left: -85px;
   bottom: -50px;
   width: 250px;
 }
+
 .place-name{
   color: $blue-default;
   font-weight: bold;
   display: block;
 }
+
 .btn{
   color: #ffffff;
   border-radius: 50px;
@@ -146,29 +162,30 @@ img.child-image{
       color: #ffffff;
       background: $yellow-default;
     }
-}
-.btn-yellow{
-  background: $yellow-default;
-    &:hover{
-      background: $blue-default;
+    &.btn-yellow{
+      background: $yellow-default;
+        &:hover{
+          background: $blue-default;
+        }
     }
-}
-.btn-wide{
-  width: 200px;
-  border: 2px solid $blue-default;
-    &:hover{
+    &.btn-wide{
+      width: 200px;
       border: 2px solid $blue-default;
-      color: $blue-default;
-      box-sizing: border-box;
+        &:hover{
+          border: 2px solid $blue-default;
+          color: $blue-default;
+          box-sizing: border-box;
+        }
     }
 }
+
 .news-container{
   position: relative;
   background-image: url("../img/news-bg.png");
   padding-top: 6rem;
   padding-bottom: 3rem;
 
-    h2{
+    .news-heading{
       font-size: 2rem;
       margin: 50px 0;
       text-transform: uppercase;
@@ -176,29 +193,29 @@ img.child-image{
       font-weight: bold;
       color: $yellow-default;
     }
+
     .news{
       margin-bottom: 1rem;
       margin: 1rem auto;
       padding: 1rem;
-      // padding-bottom: 3rem;
       box-sizing: border-box;
       position: relative;
 
-      img{
-        width: 100%;
-        border-top: 3px solid $yellow-default;
-      }
-      h3{
-        color: $blue-default;
-        font-size: 1.4rem;
-        margin: 1.5rem 0;
-        min-height: 75px;
-      }
-      p{
-        min-height: 50px;
-        line-height: 1.6rem;
-        text-align: justify;
-      }
+        img{
+          width: 100%;
+          border-top: 3px solid $yellow-default;
+        }
+        .news-title{
+          color: $blue-default;
+          font-size: 1.4rem;
+          margin: 1.5rem 0;
+          min-height: 75px;
+        }
+        .news-content{
+          min-height: 50px;
+          line-height: 1.6rem;
+          text-align: justify;
+        }
     }
 }
 .staff-container{
@@ -206,18 +223,19 @@ img.child-image{
   background-position: right;
   position: relative;
   height: 570px;
-  h2, p {
+
+  .staff-heading, .staff-text {
     color: #ffffff;
     text-transform: uppercase;
   }
-    h2{
+    .staff-heading{
       font-size: 3rem;
       text-align: center;
       font-weight: bold;
       margin-top: 100px;
       padding: 1rem 0;
     }
-    p{
+    .staff-text{
       text-align: center;
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
@@ -230,7 +248,7 @@ img.child-image{
   left: 0;
 }
 .reviews-container {
-  h2 {
+  .reviews-heading {
     font-size: 1.7rem;
     text-transform: uppercase;
     color: $yellow-default;
@@ -437,10 +455,10 @@ span.star-checked, span.star-not-checked{
     width: 700px;
   }
   .staff-container{
-    h2, p {
+    .staff-heading, .staff-text {
       text-align: left;
     }
-    p{
+    .staff-text{
       padding: 1rem 0;
     }
     .btn{
