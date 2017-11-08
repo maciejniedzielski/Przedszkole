@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maciejniedzielski/kindergarten.git"
+    "url": "git+https://github.com/maciejniedzielski/przedszkole.git"
   },
   "author": "Maciej Niedzielski",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maciejniedzielski/kindergarten/issues"
+    "url": "https://github.com/maciejniedzielski/przedszkole/issues"
   },
-  "homepage": "https://github.com/maciejniedzielski/kindergarten#readme",
+  "homepage": "https://github.com/maciejniedzielski/przedszkole#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
