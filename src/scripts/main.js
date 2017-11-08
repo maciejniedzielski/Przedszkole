@@ -1,4 +1,7 @@
+//AOS initialization
 AOS.init();
+
+//Smooth Scroller + hash changer
 $(document).ready(function(){
   $('a[href*="#"]:not([href="#"])').on('click', function(event) {
 
