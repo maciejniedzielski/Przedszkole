@@ -99,6 +99,7 @@ header, main, footer{
   position: relative;
   height: 100vh;
   min-height: 750px;
+  background-image: url("../img/welcome-bg.jpg");
   display: flex;
   align-items: center;
   align-content: center;
@@ -114,29 +115,33 @@ header, main, footer{
     color: $blue-bright;
     padding: 1rem 0.7rem;
     line-height: 1.7rem;
+    margin-top: 15px;
   }
-  .wrapper-li{
-    display: inline-block;
-    border-bottom: 2px solid #dbdbdb;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    color: #dbdbdb;
-      &.active{
-        border-color: $yellow-default;
-        font-size: 1.5rem;
-        color: #303030;
-        }
-      &:hover, &:focus{
-          cursor: pointer;
-          color: $yellow-default;
-      }
-  }
+  .wrapper-menu{
+    padding: 10px;
 
+    .wrapper-li{
+      display: inline-block;
+      border-bottom: 2px solid #dbdbdb;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      color: #dbdbdb;
+        &.active{
+          border-color: $yellow-default;
+          font-size: 1.5rem;
+          color: #303030;
+          }
+        &:hover, &:focus{
+            cursor: pointer;
+            color: $yellow-default;
+        }
+    }
+  }
 }
 
 img.child-image{
   position: absolute;
-  left: -85px;
+  left: -90px;
   bottom: -50px;
   width: 250px;
 }
@@ -310,6 +315,17 @@ span.star-checked, span.star-not-checked{
   text-align: justify;
   color: #b0b0b0;
   line-height: 1.6rem;
+}
+.quotation-mark {
+  color: $blue-default;
+  font-size: 1.3rem;
+  font-weight: bold;
+    &.start{
+      margin-right: 5px;
+    }
+    &.end{
+      margin-left: 5px;
+    }
 }
 .footer-content{
   width: 100%;
@@ -509,6 +525,11 @@ span.star-checked, span.star-not-checked{
        a{
          margin: 0 10px;
        }
+    }
+  }
+  .welcome{
+    .welcome-heading{
+      margin-top: 150px;
     }
   }
   img.child-image{
